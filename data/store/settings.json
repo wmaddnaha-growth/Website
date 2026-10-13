@@ -1,0 +1,19 @@
+{
+  "siteName": "و مددناها",
+  "tagline": "أنت تصلح بيتك، وتبني بيت غيرك",
+  "mainHeadline": "البيت السوي… بيبدأ من أساس سوي.",
+  "mainSubheadline": "قبل ما نبني أولادنا، لازم نفهم بعض. و«و مددناها» بتساعدك تفهم شريك حياتك، تصلّح علاقتك، وتبني بيت أهدى وأسعد.",
+  "impactPercentage": 30,
+  "waqfTotalRaised": 45200,
+  "supportPhone": "+20 155 308 9928",
+  "supportEmail": "support@wamaddadnaha.com",
+  "currency": "EGP",
+  "defaultPriceWives": 350,
+  "defaultPriceHusbands": 350,
+  "defaultPriceBundle": 550,
+  "paymentGatewaysEnabled": {
+    "card": true,
+    "fawry": true,
+    "wallet": true
+  }
+}

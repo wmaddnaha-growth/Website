@@ -1,0 +1,48 @@
+[
+  {
+    "id": "WM-849201",
+    "customerName": "أحمد محمود",
+    "email": "ahmed.m@example.com",
+    "phone": "01012345678",
+    "city": "القاهرة",
+    "deliveryType": "digital",
+    "paymentMethod": "card",
+    "items": [
+      {
+        "productId": "bundle",
+        "productName": "باكدج البيت السوي (شفرة الرجالة + شفرة النساء)",
+        "price": 550,
+        "quantity": 1
+      }
+    ],
+    "subtotal": 550,
+    "discountAmount": 0,
+    "total": 550,
+    "waqfAmount": 165,
+    "status": "completed",
+    "createdAt": "2026-10-05T14:20:00Z"
+  },
+  {
+    "id": "WM-739102",
+    "customerName": "سارة السيد",
+    "email": "sara.s@example.com",
+    "phone": "01223456789",
+    "city": "الإسكندرية",
+    "deliveryType": "digital",
+    "paymentMethod": "fawry",
+    "items": [
+      {
+        "productId": "shifrat-al-regal",
+        "productName": "شفرة الرجالة",
+        "price": 350,
+        "quantity": 1
+      }
+    ],
+    "subtotal": 350,
+    "discountAmount": 0,
+    "total": 350,
+    "waqfAmount": 105,
+    "status": "completed",
+    "createdAt": "2026-10-05T18:45:00Z"
+  }
+]
