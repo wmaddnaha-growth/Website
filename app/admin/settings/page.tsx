@@ -160,14 +160,24 @@ export default function AdminSettingsPage() {
         <Card hoverEffect={false} className="p-6 bg-white space-y-4">
           <h3 className="font-bold text-lg text-stone-900 border-b pb-2">بيانات التواصل والدعم الفني</h3>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
             <div>
-              <label className="block text-xs font-bold text-stone-700 mb-1">رقم الهاتف / الواتساب</label>
+              <label className="block text-xs font-bold text-stone-700 mb-1">رقم الواتساب والتواصل الرسمي</label>
               <input
                 type="text"
                 value={settings.supportPhone}
                 onChange={(e) => setSettings({ ...settings, supportPhone: e.target.value })}
                 className="w-full text-sm p-2.5 border border-sand-300 rounded-xl"
+              />
+            </div>
+
+            <div>
+              <label className="block text-xs font-bold text-stone-700 mb-1">رقم فودافون كاش & إنستاباي (للدفع)</label>
+              <input
+                type="text"
+                value={settings.paymentPhone || '01093637678'}
+                onChange={(e) => setSettings({ ...settings, paymentPhone: e.target.value })}
+                className="w-full text-sm p-2.5 border border-sand-300 rounded-xl font-mono"
               />
             </div>
 

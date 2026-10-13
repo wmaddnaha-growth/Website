@@ -150,6 +150,16 @@ export const Footer: React.FC = () => {
                   تواصل معنا
                 </Link>
               </li>
+              <li>
+                <a
+                  href="https://wa.me/201553089928"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-amber-300 transition-colors text-xs text-amber-300 font-semibold"
+                >
+                  واتساب الدعم: 01553089928
+                </a>
+              </li>
             </ul>
           </div>
 

@@ -69,8 +69,27 @@ export default function ContactPage() {
                     <Phone className="w-4 h-4" />
                   </div>
                   <div>
-                    <span className="text-xs text-stone-500 block">واتساب والدعم الفني:</span>
-                    <span className="font-semibold text-stone-900 dir-ltr inline-block">+20 155 308 9928</span>
+                    <span className="text-xs text-stone-500 block">واتساب خدمة العملاء (واستلام السكرينات):</span>
+                    <a
+                      href="https://wa.me/201553089928"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="font-semibold text-emerald-800 hover:underline dir-ltr inline-block"
+                    >
+                      +20 155 308 9928 (01553089928)
+                    </a>
+                  </div>
+                </div>
+
+                <div className="flex items-center gap-3">
+                  <div className="w-9 h-9 rounded-xl bg-amber-100 text-amber-900 flex items-center justify-center font-bold text-sm">
+                    💳
+                  </div>
+                  <div>
+                    <span className="text-xs text-stone-500 block">رقم فودافون كاش & إنستاباي (للدفع والتحويل):</span>
+                    <span className="font-semibold text-stone-900 font-mono dir-ltr inline-block">
+                      01093637678
+                    </span>
                   </div>
                 </div>
 

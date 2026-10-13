@@ -703,7 +703,7 @@ export const ShifratAlRegalLanding: React.FC = () => {
                     </span>
 
                     <p className="text-stone-800 text-sm font-bold leading-relaxed">
-                      لو حابة تستلمي الكتب والحزمة <span className="text-emerald-700 font-black">فوراً دلوقتي</span>، اضغطي على زرار الواتساب وابعثي صورة التحويل هناك:
+                      لو حابة تستلمي الكتب والحزمة <span className="text-emerald-700 font-black">فوراً دلوقتي</span>، اضغطي على زرار الواتساب وابعثي صورة التحويل (السكرين شوت) على رقم خدمة العملاء (<span className="font-mono dir-ltr font-bold text-emerald-900">01553089928</span>):
                     </p>
 
                     <a
@@ -712,7 +712,7 @@ export const ShifratAlRegalLanding: React.FC = () => {
                       rel="noopener noreferrer"
                       className="block w-full bg-emerald-700 hover:bg-emerald-800 text-white font-black py-4 rounded-xl shadow-lg transition-transform hover:scale-[1.02] text-center"
                     >
-                      💬 اضغطي هنا للاستلام الفوري عبر الواتساب
+                      💬 إرسال سكرين شوت التحويل عبر الواتساب (01553089928)
                     </a>
                   </div>
 
@@ -770,15 +770,38 @@ export const ShifratAlRegalLanding: React.FC = () => {
 
                   {/* Payment Instructions Box */}
                   <div className="p-4 bg-sand-50 rounded-2xl border border-sand-200 text-right space-y-3">
-                    <h4 className="font-bold text-stone-900 text-sm flex items-center gap-1.5">
-                      <span>💳 طرق الدفع (فودافون كاش / إنستا باي):</span>
-                    </h4>
-                    <p className="text-xs text-stone-700 leading-relaxed">
-                      يرجى تحويل مبلغ <span className="font-bold text-burgundy-800">310 ج.م</span> إلى الرقم التالي:
-                    </p>
-                    <div className="bg-white p-3 rounded-xl border border-sand-300 text-center font-mono font-black text-lg text-burgundy-900 tracking-wider dir-ltr select-all">
-                      01553089928
+                    {/* رقم التحويل: فودافون كاش وإنستاباي */}
+                    <div className="border-b border-sand-200 pb-3">
+                      <h4 className="font-bold text-stone-900 text-sm flex items-center gap-1.5 mb-1">
+                        <span>💳 رقم التحويل (فودافون كاش & إنستاباي):</span>
+                      </h4>
+                      <p className="text-xs text-stone-700 leading-relaxed mb-2">
+                        يرجى تحويل مبلغ <span className="font-bold text-burgundy-800">310 ج.م</span> إلى رقم المحفظة / إنستاباي التالي:
+                      </p>
+                      <div className="bg-white p-3 rounded-xl border-2 border-burgundy-700 text-center font-mono font-black text-xl text-burgundy-950 tracking-wider dir-ltr select-all shadow-xs">
+                        01093637678
+                      </div>
+                      <span className="text-[11px] text-stone-500 block text-center mt-1">
+                        (مخصص لاستقبال تحويلات فودافون كاش وإنستاباي فقط)
+                      </span>
                     </div>
+
+                    {/* رقم الواتساب لاستلام السكرينات */}
+                    <div className="bg-emerald-50/80 p-3.5 rounded-xl border border-emerald-200 space-y-1.5">
+                      <h5 className="font-bold text-emerald-950 text-xs flex items-center gap-1">
+                        <span>📲 رقم الواتساب لإرسال إيصال التحويل (سكرين شوت):</span>
+                      </h5>
+                      <p className="text-xs text-stone-700 leading-relaxed">
+                        بعد إتمام التحويل، أرسلي سكرين شوت الإيصال على رقم الواتساب الرسمي لاستلام الكتاب فوراً:
+                      </p>
+                      <div className="bg-white p-2.5 rounded-lg border border-emerald-300 text-center font-mono font-bold text-base text-emerald-900 dir-ltr select-all">
+                        01553089928
+                      </div>
+                      <p className="text-[11px] text-emerald-800 text-center font-medium">
+                        (رقم خدمة العملاء والتواصل الرسمي لإرسال الكتب وتأكيد الحجز)
+                      </p>
+                    </div>
+
                     {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img
                       src="/images/shifrat-al-regal/wallets.jpg"

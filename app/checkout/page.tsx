@@ -116,6 +116,31 @@ export default function CheckoutPage() {
               </div>
             )}
 
+            {/* WhatsApp Confirmation & Screenshot Submission */}
+            <div className="bg-emerald-50 p-6 rounded-2xl border-2 border-emerald-300 text-center space-y-3">
+              <span className="inline-block bg-emerald-200 text-emerald-950 text-xs font-bold px-3 py-1 rounded-full">
+                📲 تأكيد واستلام عبر الواتساب
+              </span>
+              <p className="text-xs sm:text-sm text-stone-800 font-semibold leading-relaxed">
+                لو قمت بالتحويل عبر <span className="font-bold text-burgundy-900">فودافون كاش أو إنستاباي</span>، يُرجى إرسال سكرين شوت التحويل مع رقم الطلب (<span className="font-bold font-mono text-emerald-900">#{orderConfirmed.orderId}</span>) إلى واتساب خدمة العملاء:
+              </p>
+              <div className="bg-white p-2.5 rounded-xl border border-emerald-300 font-mono font-bold text-base text-emerald-950 inline-block px-5 dir-ltr select-all shadow-xs">
+                01553089928
+              </div>
+              <div>
+                <a
+                  href={`https://wa.me/201553089928?text=${encodeURIComponent(
+                    `مرحباً، قمت بعمل طلب رقم #${orderConfirmed.orderId} بمبلغ ${orderConfirmed.total} ج.م، ومرفق سكرين شوت التحويل لاستلام الكتاب.`
+                  )}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center gap-2 w-full sm:w-auto bg-emerald-700 hover:bg-emerald-800 text-white font-bold py-3.5 px-6 rounded-xl shadow-md transition-all text-sm"
+                >
+                  💬 إرسال سكرين شوت التحويل عبر الواتساب (01553089928)
+                </a>
+              </div>
+            </div>
+
             {/* Waqf Thank You Note */}
             <div className="bg-emerald-950 text-white p-6 rounded-2xl space-y-2">
               <Heart className="w-6 h-6 text-amber-300 mx-auto" />
@@ -381,10 +406,43 @@ export default function CheckoutPage() {
                         checked={formData.paymentMethod === 'wallet'}
                         onChange={() => setFormData({ ...formData, paymentMethod: 'wallet' })}
                       />
-                      <span className="font-bold text-sm text-stone-900">محافظ إلكترونية (فودافون كاش / اتصالات / أورانج)</span>
+                      <span className="font-bold text-sm text-stone-900">محافظ إلكترونية (فودافون كاش / إنستاباي)</span>
                     </div>
                     <PhoneCall className="w-5 h-5 text-stone-500" />
                   </label>
+
+                  {formData.paymentMethod === 'wallet' && (
+                    <div className="p-4 bg-sand-50 rounded-2xl border-2 border-burgundy-200 space-y-3 animate-fadeIn text-right">
+                      {/* رقم التحويل */}
+                      <div className="border-b border-sand-200 pb-3">
+                        <span className="text-xs font-bold text-stone-800 block mb-1">
+                          💳 رقم التحويل (فودافون كاش & إنستاباي):
+                        </span>
+                        <div className="bg-white p-3 rounded-xl border-2 border-burgundy-800 font-mono font-black text-xl text-burgundy-950 text-center tracking-wider dir-ltr select-all shadow-xs">
+                          01093637678
+                        </div>
+                        <span className="text-[11px] text-stone-500 block text-center mt-1">
+                          (يرجى تحويل المبلغ الإجمالي إلى هذا الرقم عبر محفظة فودافون كاش أو إنستاباي)
+                        </span>
+                      </div>
+
+                      {/* رقم الواتساب لإرسال السكرين شوت */}
+                      <div className="bg-emerald-50/90 p-3.5 rounded-xl border border-emerald-200 text-xs text-stone-700 space-y-1.5">
+                        <span className="font-bold text-emerald-950 block">
+                          📲 رقم الواتساب لإرسال سكرين شوت التحويل وتأكيد الاستلام:
+                        </span>
+                        <p className="text-[11px] text-stone-600">
+                          بعد إتمام التحويل، أرسل صورة الإيصال (السكرين شوت) على رقم الواتساب الرسمي:
+                        </p>
+                        <div className="bg-white p-2.5 rounded-lg border border-emerald-300 font-mono font-bold text-base text-emerald-900 text-center dir-ltr select-all">
+                          01553089928
+                        </div>
+                        <p className="text-[11px] text-emerald-800 text-center font-medium">
+                          (رقم خدمة العملاء المخصص لتأكيد طلبك وتفعيل استلام الكتاب فوراً)
+                        </p>
+                      </div>
+                    </div>
+                  )}
                 </div>
 
                 {/* Integration Boundary Explanation Note */}

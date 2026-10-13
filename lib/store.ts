@@ -35,6 +35,7 @@ export interface SiteSettings {
   impactPercentage: number;
   waqfTotalRaised: number;
   supportPhone: string;
+  paymentPhone: string;
   supportEmail: string;
   currency: string;
   defaultPriceWives: number;
@@ -55,6 +56,7 @@ export const defaultSettings: SiteSettings = {
   impactPercentage: 30,
   waqfTotalRaised: 45200,
   supportPhone: '+20 155 308 9928',
+  paymentPhone: '01093637678',
   supportEmail: 'support@wamaddadnaha.com',
   currency: 'EGP',
   defaultPriceWives: 350,
